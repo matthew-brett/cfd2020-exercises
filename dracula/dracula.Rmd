@@ -43,6 +43,15 @@ You can find the full text of Bram Stoker's Dracula at
 <http://www.gutenberg.org/ebooks/345.txt.utf-8>.
 
 
+## Don't worry about the details
+
+The exercise asks you to edit the code in the original notebook, but, like the
+original notebook, we do not expect you to fully understand this code.  You
+will learn many aspects of how this code works over the rest of the course.
+
+
+## The task
+
 Below, you will see the code cells from the original Literary Characters
 notebook.  Your task is to edit these code cells so the notebook analyzes
 "Dracula" instead of "Pride and Prejudice".
@@ -103,6 +112,16 @@ book_text = read_url(book_url)
 print(book_text[:500])
 ```
 
+Look at the text that Python prints.  Make sure it's the first 500 characters
+of "Dracula" and not "Pride and Prejudice".  If you the text is from "Dracula",
+the first line printed above should be "The Project Gutenberg EBook of Dracula,
+by Bram Stoker".
+
+If the text printed is still from "Pride and Prejudice", go back and check you
+have changed the URL, as above, and that you have run the cell reading in the
+text.
+
+
 ## Split the book text into chapters
 
 Run this code cell (Shift-Enter) to split the text into chapters:
@@ -114,12 +133,6 @@ book_chapters = book_text.split('CHAPTER ')
 # Drop the first "Chapter" - it's the Project Gutenberg header
 book_chapters = book_chapters[1:]
 ```
-
-Look at the text that Python prints.  Make sure it's the first 500 characters
-of "Dracula" and not "Pride and Prejudice".  If it's from "Pride and
-Prejudice", go back and check you have changed the URL, as above, and that you
-have run the cell reading in the text.
-
 
 ## Count how many times each character name occurs
 
